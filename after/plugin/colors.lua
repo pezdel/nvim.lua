@@ -46,4 +46,4 @@ NeoSolarized.setup {
 -- ]]
 --
 
-vim.cmd[[colorscheme gruvbox-baby]]
+vim.cmd[[colorscheme NeoSolarized]]

@@ -23,6 +23,9 @@ return require('packer').startup(function(use)
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',}
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
     use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
+    use {"folke/tokyonight.nvim"}
+    use {"whatyouhide/vim-gotham"}
+    use {"EdenEast/nightfox.nvim"}
 
 
 
@@ -31,6 +34,7 @@ return require('packer').startup(function(use)
     use {"RRethy/vim-illuminate"}
     use {"lukas-reineke/indent-blankline.nvim"}
     use {"numToStr/Comment.nvim"}
+    use {"akinsho/toggleterm.nvim", tag = '*'}
 
     use {
         'VonHeikemen/lsp-zero.nvim',
