@@ -7,7 +7,6 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.swapfile = false
-vim.opt.termguicolors = true
 vim.opt.backup = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cmdheight = 1
@@ -23,5 +22,7 @@ vim.opt.undofile = true
 vim.opt.updatetime = 300
 vim.opt.writebackup = false
 vim.opt.signcolumn = 'no'
+vim.opt.termguicolors = true
 
-
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1

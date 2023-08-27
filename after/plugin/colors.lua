@@ -32,18 +32,20 @@ NeoSolarized.setup {
   },
   -- Add specific hightlight groups
   on_highlights = function(highlights, colors) 
-    -- highlights.Include.fg = colors.red -- Using `red` foreground for Includes
+    highlights.CurrentWord.bg = "#0f4a59"
+    highlights.CurrentWord.fg = colors.none
   end, 
 }
--- Set colorscheme to NeoSolarized
--- vim.cmd [[
---    try
---         colorscheme gruvbox-baby 
---     catch /^Vim\%((\a\+)\)\=:E18o
---         colorscheme default
---         set background=dark
---     endtry
--- ]]
---
 
-vim.cmd[[colorscheme NeoSolarized]]
+require("nightly").setup({
+  transparent = false,
+  styles = {
+    comments = { italic = true },
+    functions = { italic = false },
+    variables = { italic = false },
+    keywords = { italic = false },
+  },
+  highlights = {},
+})
+
+vim.cmd[[colorscheme nightly]]

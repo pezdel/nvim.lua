@@ -4,9 +4,9 @@ if not status_ok then
 end
 
 
-vim.opt.list = true
+-- vim.opt.list = true
 
 indent_blankline.setup {
-    show_first_indent_level = false,
-    show_end_of_line = true,
+    -- show_first_indent_level = false,
+    -- show_end_of_line = true,
 }

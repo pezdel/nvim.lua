@@ -18,11 +18,13 @@ end
 
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set("n", "<leader>fa", "<cmd>Telescope adjacent<CR>", { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>f', builtin.find_files, {})
+vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>b', builtin.buffers, {})
+vim.keymap.set('n', '<leader>d', builtin.diagnostics, {})
+vim.keymap.set('n', '<leader>s', builtin.lsp_document_symbols, {})
+vim.keymap.set('n', '<leader>S', builtin.lsp_workspace_symbols, {})
+vim.keymap.set("n", "<leader>F", "<cmd>Telescope adjacent<CR>", { noremap = true, silent = false })
 
 require('telescope').load_extension("adjacent")
 require('telescope').setup({
@@ -32,5 +34,16 @@ require('telescope').setup({
         selection_caret = " ",
         path_display = {"smart"},
         file_ignore_patterns = { ".git/", "node_modules" },
+        layout_config ={
+            horizontal = {
+                preview_cutoff = 0,
+                preview_width = .5
+            }
+        }
     },
+    pickers = {
+        find_files = {
+            -- theme = "dropdown"
+        }
+    }
 })

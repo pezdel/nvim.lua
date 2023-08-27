@@ -7,17 +7,18 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use {"MaximilianLloyd/adjacent.nvim"}
 
+    use {"AlexvZyl/nordic.nvim"}
 
     use({
         "luisiacc/gruvbox-baby",
         as = "gruvbox-baby"
     })
     use({'Tsuzat/NeoSolarized.nvim', as = "NeoSolarized"})
+    use {"nyoom-engineering/oxocarbon.nvim"}
 
     use 'xiyaowong/nvim-transparent'
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',}
@@ -26,16 +27,29 @@ return require('packer').startup(function(use)
     use {"folke/tokyonight.nvim"}
     use {"whatyouhide/vim-gotham"}
     use {"EdenEast/nightfox.nvim"}
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup()
+    end}
+    -- use {
+    --   'nvim-tree/nvim-tree.lua',
+    -- }
 
-
-
-    use {"jiangmiao/auto-pairs"}
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
     use {"windwp/nvim-ts-autotag"}
     use {"RRethy/vim-illuminate"}
-    use {"lukas-reineke/indent-blankline.nvim"}
+    -- use {"lukas-reineke/indent-blankline.nvim"}
     use {"numToStr/Comment.nvim"}
-    use {"akinsho/toggleterm.nvim", tag = '*'}
+    use {'voidekh/kyotonight.vim'}
+    use {"kyazdani42/blue-moon"}
+    use {'Mofiqul/vscode.nvim'}
+    use {"Alexis12119/nightly.nvim"}
+    use 'ishan9299/nvim-solarized-lua'
+    use 'eddyekofo94/gruvbox-flat.nvim'
 
+    use {"sainnhe/everforest"}
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -55,7 +69,7 @@ return require('packer').startup(function(use)
 
             -- Snippets
             {'L3MON4D3/LuaSnip'},             -- Required
-            {'rafamadriz/friendly-snippets'}, -- Optional
+            -- {'rafamadriz/friendly-snippets'}, -- Optional
         }
     }
 end)

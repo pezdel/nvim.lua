@@ -5,7 +5,6 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'tsserver',
   'eslint',
-  'sumneko_lua',
   'rust_analyzer',
   'cssls',
   'html',
@@ -14,10 +13,18 @@ lsp.ensure_installed({
   'yamlls',
   'gopls',
   'svelte',
-  'sqls'
+  'sqlls'
 })
 
 -- Fix Undefined global 'vim'
+lsp.format_on_save({
+    servers = {
+        ["rust_analyzer"] = {"rust"},
+        ["svelte"] = {"svelte"},
+        ["tsserver"] = {"typescript"},
+        ["gopls"] = {"go"}
+    }
+})
 lsp.configure('sumneko_lua', {
     settings = {
         Lua = {
@@ -73,6 +80,22 @@ lsp.setup()
 
 
 vim.diagnostic.config({
-    virtual_text = false,
     underline = true,
+    -- virtual_text = true,
 })
+
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--     buffer = bufnr,
+--     callback = function()
+--         local opts = {
+--             focusable = false,
+--             close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+--             border = 'rounded',
+--             source = 'always',
+--             prefix = ' ',
+--             scope = 'cursor',
+--         }
+--         vim.diagnostic.open_float(nil, opts)
+--     end
+-- })
+
