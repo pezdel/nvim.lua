@@ -12,6 +12,9 @@ return require('packer').startup(function(use)
     use {"MaximilianLloyd/adjacent.nvim"}
 
     use {"AlexvZyl/nordic.nvim"}
+    use {"ramojus/mellifluous.nvim"}
+    use {"joerdav/templ.vim"}
+    use {"vrischmann/tree-sitter-templ"}
 
     use({
         "luisiacc/gruvbox-baby",
@@ -19,6 +22,11 @@ return require('packer').startup(function(use)
     })
     use({'Tsuzat/NeoSolarized.nvim', as = "NeoSolarized"})
     use {"nyoom-engineering/oxocarbon.nvim"}
+    -- use {"nvim-tree/nvim-tree.lua"}
+    use {"preservim/nerdtree"}
+    use {"tiagovla/tokyodark.nvim"}
+    use {"navarasu/onedark.nvim"}
+
 
     use 'xiyaowong/nvim-transparent'
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',}
@@ -40,6 +48,7 @@ return require('packer').startup(function(use)
     }
     use {"windwp/nvim-ts-autotag"}
     use {"RRethy/vim-illuminate"}
+    use {"neoclide/vim-jsx-improve"}
     -- use {"lukas-reineke/indent-blankline.nvim"}
     use {"numToStr/Comment.nvim"}
     use {'voidekh/kyotonight.vim'}
@@ -48,6 +57,7 @@ return require('packer').startup(function(use)
     use {"Alexis12119/nightly.nvim"}
     use 'ishan9299/nvim-solarized-lua'
     use 'eddyekofo94/gruvbox-flat.nvim'
+    use "felipeagc/fleet-theme-nvim"
 
     use {"sainnhe/everforest"}
     use {

@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
+  ["fleet-theme-nvim"] = {
+    loaded = true,
+    path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/fleet-theme-nvim",
+    url = "https://github.com/felipeagc/fleet-theme-nvim"
+  },
   ["gruvbox-baby"] = {
     loaded = true,
     path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
@@ -168,6 +173,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["mellifluous.nvim"] = {
+    loaded = true,
+    path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/mellifluous.nvim",
+    url = "https://github.com/ramojus/mellifluous.nvim"
+  },
+  nerdtree = {
+    loaded = true,
+    path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/nerdtree",
+    url = "https://github.com/preservim/nerdtree"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -225,6 +240,11 @@ _G.packer_plugins = {
     path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["oxocarbon.nvim"] = {
     loaded = true,
     path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
@@ -245,16 +265,31 @@ _G.packer_plugins = {
     path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["templ.vim"] = {
+    loaded = true,
+    path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/templ.vim",
+    url = "https://github.com/joerdav/templ.vim"
+  },
   ["toggleterm.nvim"] = {
     config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0" },
     loaded = true,
     path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["tokyodark.nvim"] = {
+    loaded = true,
+    path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/tokyodark.nvim",
+    url = "https://github.com/tiagovla/tokyodark.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["tree-sitter-templ"] = {
+    loaded = true,
+    path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/tree-sitter-templ",
+    url = "https://github.com/vrischmann/tree-sitter-templ"
   },
   ["vim-gotham"] = {
     loaded = true,
@@ -265,6 +300,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
+  },
+  ["vim-jsx-improve"] = {
+    loaded = true,
+    path = "/home/pezdel/.local/share/nvim/site/pack/packer/start/vim-jsx-improve",
+    url = "https://github.com/neoclide/vim-jsx-improve"
   },
   ["vscode.nvim"] = {
     loaded = true,

@@ -47,5 +47,8 @@ require("nightly").setup({
   },
   highlights = {},
 })
+require('onedark').setup{
+    style="darker"
+}
 
-vim.cmd[[colorscheme nightly]]
+vim.cmd[[colorscheme solarized-flat]]

@@ -28,9 +28,12 @@ vim.keymap.set("n", "<leader>2", ":e ~/.tmux.conf<CR>")
 vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 
+--Tree 
 vim.keymap.set("n", "<alt>T", ":ToggleTerm direction=float<CR>")
-vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>n", ":NvimTreeOpen<CR>")
+-- vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
+-- vim.keymap.set("n", "<leader>n", ":NvimTreeOpen<CR>")
+vim.keymap.set("n", "<leader>t", ":NERDTreeToggle<CR>")
+vim.keymap.set("n", "<leader>n", ":NERDTreeFocus<CR>")
 
 --VISIUAL
 -- Better paste
@@ -38,3 +41,5 @@ vim.keymap.set("v", "p", '"_dP', opts)
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv", opts)
 vim.keymap.set("v", ">", ">gv", opts)
+
+

@@ -1,5 +1,6 @@
 -- Learn the keybindings, see :help lsp-zero-keybindings
 -- Learn to configure LSP servers, see :help lsp-zero-api-showcase
+--
 local lsp = require("lsp-zero")
 lsp.preset("recommended")
 lsp.ensure_installed({
@@ -9,11 +10,15 @@ lsp.ensure_installed({
   'cssls',
   'html',
   'pyright',
+  -- 'java_language_server',
+  'templ',
+  'jdtls',
   'jsonls',
   'yamlls',
   'gopls',
   'svelte',
-  'sqlls'
+  'sqlls',
+  'dockerls'
 })
 
 -- Fix Undefined global 'vim'
@@ -22,9 +27,40 @@ lsp.format_on_save({
         ["rust_analyzer"] = {"rust"},
         ["svelte"] = {"svelte"},
         ["tsserver"] = {"typescript"},
-        ["gopls"] = {"go"}
+        ["gopls"] = {"go"},
+        ["html"] = {"html"},
+        ["dockerls"] = {"docker"},
+        ["jdtls"] = {"java"},
+        -- ["templ"] = {"templ"},
+        -- ["java_language_server"] = {"java"},
     }
 })
+
+-- Format current buffer using LSP.
+vim.api.nvim_create_autocmd(
+  {
+    -- 'BufWritePre' event triggers just before a buffer is written to file.
+    "BufWritePre"
+  },
+  {
+    pattern = {"*.templ"},
+    callback = function()
+      vim.lsp.buf.format()
+    end,
+  }
+)
+require("lspconfig").tailwindcss.setup({
+  filetypes = {
+    'templ'
+    -- include any other filetypes where you need tailwindcss
+  },
+  init_options = {
+    userLanguages = {
+        templ = "html"
+    }
+  }
+})
+
 lsp.configure('sumneko_lua', {
     settings = {
         Lua = {
@@ -81,7 +117,7 @@ lsp.setup()
 
 vim.diagnostic.config({
     underline = true,
-    -- virtual_text = true,
+    virtual_text = true,
 })
 
 -- vim.api.nvim_create_autocmd("CursorHold", {
