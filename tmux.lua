@@ -1,0 +1,37 @@
+-- just putting this here, not the real location.
+--
+-- set -g default-terminal 'screen-256color'
+-- set -ga terminal-overrides ",*256col*:Tc"
+-- set -s escape-time 0
+--
+-- unbind C-b
+-- set-option -g prefix C-a
+-- bind-key C-a send-prefix
+-- set -g status-style 'bg=#333333 fg=#5eacd3'
+--
+--
+-- bind r source-file ~/.tmux.conf
+-- set -g base-index 1
+--
+-- set-window-option -g mode-keys vi
+-- bind -T copy-mode-vi v send-keys -X begin-selection
+-- bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+-- bind -r 1 switch -t 1
+--
+--
+-- # vim-like pane switching
+-- bind -r ^ last-window
+-- bind -r k select-pane -U
+-- bind -r j select-pane -D
+-- bind -r h select-pane -L
+-- bind -r l select-pane -R
+--
+-- bind -n C-Left previous-window
+-- bind -n C-Right next-window
+--
+-- bind-key -r f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
+-- setw -g mouse on
+-- bind -n M-1 switch-client -t 1
+-- bind -n M-2 switch-client -t 2
+-- bind -n M-3 switch-client -t 3
+-- bind -n M-4 switch-client -t 4
