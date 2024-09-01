@@ -1,4 +1,5 @@
 -- just putting this here, not the real location.
+-- real location ~/.tmux
 --
 -- set -g default-terminal 'screen-256color'
 -- set -ga terminal-overrides ",*256col*:Tc"
